@@ -8,7 +8,7 @@ import akt.hrms.entities.concretes.JobPosition;
 
 public interface JobPositionService {
 
-	DataResult<List<JobPosition>> getAll();
-	
-	Result add(JobPosition jobPosition);
+	List<JobPosition> getAll();
+	public Result add(JobPosition jobPosition);
+	public Result delete(JobPosition jobPosition);
 }

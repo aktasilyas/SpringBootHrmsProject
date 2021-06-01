@@ -2,11 +2,9 @@ package akt.hrms.entities.concretes;
 
 
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -20,16 +18,16 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "job_positions")
+@Table(name = "cities")
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler","JobAdvertisement"})
 
-public class JobPosition {
+public class City {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue
 	@Column(name = "id")
 	private int id;
 	
-	@Column(name = "name")
-	private String name;
-
+	@Column(name = "city_name")
+	private String CityName;
+	
 }
